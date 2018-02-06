@@ -12,6 +12,8 @@
 		94EDC815202A33840077A2AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94EDC813202A33840077A2AD /* Main.storyboard */; };
 		94EDC817202A33840077A2AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94EDC816202A33840077A2AD /* Assets.xcassets */; };
 		94EDC81A202A33840077A2AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94EDC818202A33840077A2AD /* LaunchScreen.storyboard */; };
+		94EDC823202A344D0077A2AD /* VDSFlipAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EDC822202A344D0077A2AD /* VDSFlipAnimation.swift */; };
+		94EDC825202A38980077A2AD /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EDC824202A38980077A2AD /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		94EDC816202A33840077A2AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94EDC819202A33840077A2AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94EDC81B202A33840077A2AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94EDC822202A344D0077A2AD /* VDSFlipAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VDSFlipAnimation.swift; sourceTree = "<group>"; };
+		94EDC824202A38980077A2AD /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,24 @@
 		94EDC80E202A33840077A2AD /* FlipAnimations */ = {
 			isa = PBXGroup;
 			children = (
+				94EDC821202A34360077A2AD /* FlipAnimation */,
 				94EDC80F202A33840077A2AD /* AppDelegate.swift */,
 				94EDC811202A33840077A2AD /* ViewController.swift */,
+				94EDC824202A38980077A2AD /* SecondViewController.swift */,
 				94EDC813202A33840077A2AD /* Main.storyboard */,
 				94EDC816202A33840077A2AD /* Assets.xcassets */,
 				94EDC818202A33840077A2AD /* LaunchScreen.storyboard */,
 				94EDC81B202A33840077A2AD /* Info.plist */,
 			);
 			path = FlipAnimations;
+			sourceTree = "<group>";
+		};
+		94EDC821202A34360077A2AD /* FlipAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				94EDC822202A344D0077A2AD /* VDSFlipAnimation.swift */,
+			);
+			path = FlipAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +150,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94EDC825202A38980077A2AD /* SecondViewController.swift in Sources */,
 				94EDC812202A33840077A2AD /* ViewController.swift in Sources */,
 				94EDC810202A33840077A2AD /* AppDelegate.swift in Sources */,
+				94EDC823202A344D0077A2AD /* VDSFlipAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

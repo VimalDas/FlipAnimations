@@ -1,24 +1,236 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wSc-3J-ELb">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Medium</string>
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FlipAnimations" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="pI5-mb-19j">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W2f-wy-cWf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TFu-Sw-oei">
+                                        <rect key="frame" x="8" y="206" width="304" height="92"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2ZE-DD-i4O">
+                                                <rect key="frame" x="0.0" y="0.0" width="304" height="36"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6v-MX-fg6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="101.5" height="36"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                                        <state key="normal" title="Flip Right">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="flipRightButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NNv-QK-TfU"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAy-gu-hBe">
+                                                        <rect key="frame" x="101.5" y="0.0" width="101" height="36"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                                        <state key="normal" title="Flip Left">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="flipLeftButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P2U-DT-55N"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZl-b2-IUU">
+                                                        <rect key="frame" x="202.5" y="0.0" width="101.5" height="36"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                                        <state key="normal" title="Flip Top">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="flipTopButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IAU-8i-IGV"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ZEx-PF-FcM">
+                                                <rect key="frame" x="0.0" y="56" width="304" height="36"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1n-pL-qao">
+                                                        <rect key="frame" x="0.0" y="0.0" width="101.5" height="36"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                                        <state key="normal" title="Flip Bottom">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="flipBottomButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cn6-Z0-sLn"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoC-gX-Z6s">
+                                                        <rect key="frame" x="101.5" y="0.0" width="101" height="36"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                        <state key="normal" title="Curl Up">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="curlUpButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IQQ-Iw-G2b"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVk-FX-NqP">
+                                                        <rect key="frame" x="202.5" y="0.0" width="101.5" height="36"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                        <state key="normal" title="Curl Down">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="curlDownButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fX2-mP-OHf"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="z5e-rw-DhD">
+                                        <rect key="frame" x="97" y="80" width="125" height="125"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="125" id="8AU-as-kah"/>
+                                            <constraint firstAttribute="width" constant="125" id="Ikm-6M-BcF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufi-7z-9m9">
+                                        <rect key="frame" x="107.5" y="318" width="104" height="36"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                        <state key="normal" title="Navigate Flip">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="navigateFlipButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RU2-Lf-Fva"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="TFu-Sw-oei" firstAttribute="centerY" secondItem="W2f-wy-cWf" secondAttribute="centerY" constant="-32" id="27o-Pe-0q3"/>
+                                    <constraint firstItem="Ufi-7z-9m9" firstAttribute="centerX" secondItem="W2f-wy-cWf" secondAttribute="centerX" id="51H-TM-Id2"/>
+                                    <constraint firstItem="TFu-Sw-oei" firstAttribute="leading" secondItem="W2f-wy-cWf" secondAttribute="leadingMargin" id="Duk-Pm-rfb"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="TFu-Sw-oei" secondAttribute="trailing" id="FJT-Jg-pie"/>
+                                    <constraint firstItem="Ufi-7z-9m9" firstAttribute="top" secondItem="TFu-Sw-oei" secondAttribute="bottom" constant="20" id="afi-ay-BuZ"/>
+                                    <constraint firstItem="TFu-Sw-oei" firstAttribute="centerX" secondItem="W2f-wy-cWf" secondAttribute="centerX" id="fAK-jf-bBv"/>
+                                    <constraint firstItem="z5e-rw-DhD" firstAttribute="top" secondItem="W2f-wy-cWf" secondAttribute="top" constant="80" id="l1o-AZ-aok"/>
+                                    <constraint firstItem="z5e-rw-DhD" firstAttribute="centerX" secondItem="W2f-wy-cWf" secondAttribute="centerX" id="rBv-Us-hWq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pI5-mb-19j" secondAttribute="bottom" id="3YS-T1-4vp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pI5-mb-19j" secondAttribute="trailing" id="GaM-O1-n4r"/>
+                            <constraint firstItem="W2f-wy-cWf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-64" id="Mod-um-w2a"/>
+                            <constraint firstItem="pI5-mb-19j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NXx-JD-gQH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="W2f-wy-cWf" secondAttribute="trailing" id="Nlp-Hd-ZXI"/>
+                            <constraint firstItem="pI5-mb-19j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WaQ-DM-q7W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="W2f-wy-cWf" secondAttribute="bottom" id="cY7-2k-Egr"/>
+                            <constraint firstItem="W2f-wy-cWf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ueo-14-A5g"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="5yN-Fe-eL8"/>
+                    <connections>
+                        <outlet property="smallImageView" destination="z5e-rw-DhD" id="fKO-sQ-8hM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="416.80000000000001" y="11.244377811094454"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="mE9-hx-cBY">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wXd-6q-7mj" customClass="SecondViewController" customModule="FlipAnimations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f3c-bf-oJi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="btc-uw-eSI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LRH-ai-8JU">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GF6-Jd-TSt">
+                                        <rect key="frame" x="107.5" y="266" width="104" height="36"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                        <state key="normal" title="Navigate Flip">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="navigateFlip:" destination="wXd-6q-7mj" eventType="touchUpInside" id="P5K-pr-ZU3"/>
+                                            <action selector="navigateFlipButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aW4-S6-MJI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="GF6-Jd-TSt" firstAttribute="centerX" secondItem="LRH-ai-8JU" secondAttribute="centerX" id="3vc-wM-c8l"/>
+                                    <constraint firstItem="GF6-Jd-TSt" firstAttribute="centerY" secondItem="LRH-ai-8JU" secondAttribute="centerY" id="dlj-R5-6H6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="btc-uw-eSI" firstAttribute="trailing" secondItem="a65-mW-WZH" secondAttribute="trailing" id="9pV-yH-DYm"/>
+                            <constraint firstAttribute="bottom" secondItem="LRH-ai-8JU" secondAttribute="bottom" id="AKZ-Le-YL9"/>
+                            <constraint firstItem="LRH-ai-8JU" firstAttribute="leading" secondItem="a65-mW-WZH" secondAttribute="leading" id="KQ8-1g-Mpr"/>
+                            <constraint firstItem="btc-uw-eSI" firstAttribute="top" secondItem="f3c-bf-oJi" secondAttribute="top" id="LGc-Vs-A46"/>
+                            <constraint firstItem="LRH-ai-8JU" firstAttribute="trailing" secondItem="a65-mW-WZH" secondAttribute="trailing" id="PI5-dh-trT"/>
+                            <constraint firstItem="a65-mW-WZH" firstAttribute="bottom" secondItem="btc-uw-eSI" secondAttribute="bottom" id="V50-O1-EIN"/>
+                            <constraint firstItem="btc-uw-eSI" firstAttribute="leading" secondItem="a65-mW-WZH" secondAttribute="leading" id="aun-tT-2bP"/>
+                            <constraint firstItem="LRH-ai-8JU" firstAttribute="top" secondItem="a65-mW-WZH" secondAttribute="top" constant="-20" id="hNO-o7-atw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="a65-mW-WZH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y96-ZV-rGZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1156.875" y="10.56338028169014"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aCW-uB-HQ7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wSc-3J-ELb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2cB-Zv-8G6">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="puQ-Q3-GFB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="glK-Iz-PYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-299.19999999999999" y="12.593703148425789"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="2" width="640" height="640"/>
+        <image name="5" width="640" height="457"/>
+    </resources>
 </document>
